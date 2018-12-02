@@ -10,8 +10,10 @@ test_X = test_data.select_dtypes(exclude=['object'])
 test_X = test_X.drop(['Id'], axis=1)
 
 train_data = pd.read_csv('train.csv')
+
 train_y = train_data.SalePrice
-train_X= train_data.drop(['SalePrice'], axis=1)
+
+train_X = train_data.drop(['SalePrice'], axis=1)
 train_X = train_X.select_dtypes(exclude=['object'])
 train_X = train_X.drop(['Id'], axis=1)
 
@@ -25,7 +27,7 @@ model.fit(train_X, train_y)
 
 predictions = model.predict(test_X)
 
-output = pd.DataFrame({'Id': test_data.Id,
-                       'SalePrice': predictions})
-
-output.to_csv('submission_1.csv', index=False)
+# output = pd.DataFrame({'Id': test_data.Id,
+#                        'SalePrice': predictions})
+#
+# output.to_csv('submission_1.csv', index=False)
