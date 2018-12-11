@@ -1,3 +1,3 @@
 # Housing Prices
-Housing Prices Competition Code
+Housing Prices Competition Code.
 
